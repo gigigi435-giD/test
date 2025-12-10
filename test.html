@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Мое портфолио</title>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #e0f7fa;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    header {
+        background-color: #00796b;
+        padding: 15px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        transition: color 0.3s;
+    }
+
+    nav a:hover {
+        color: #ffd700;
+    }
+
+    section {
+        padding: 50px 20px;
+        max-width: 1100px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        margin-bottom: 30px;
+        color: #00796b;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    #about {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    #about img {
+        width: 220px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #00796b;
+    }
+
+    #about div {
+        max-width: 600px;
+    }
+
+    #skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #skills ul {
+        list-style: disc inside;
+        max-width: 600px;
+        padding-left: 20px;
+    }
+
+    #portfolio {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .project {
+        background-color: #b2ebf2;
+        padding: 20px;
+        border-radius: 8px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    #contacts form {
+        display: flex;
+        flex-direction: column;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    #contacts input, #contacts textarea {
+        margin-bottom: 15px;
+        padding: 12px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+    }
+
+    #contacts button {
+        padding: 12px;
+        background-color: #00796b;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    #contacts button:hover {
+        background-color: #004d40;
+    }
+
+    footer {
+        background-color: #00796b;
+        color: #fff;
+        padding: 30px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .social-icons a {
+        margin: 0 15px;
+        color: #fff;
+        font-size: 24px;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+        color: #ffd700;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#about">О себе</a>
+        <a href="#skills">Навыки</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#contacts">Контакты</a>
+    </nav>ц
+</header>
+
+<section id="about">
+    <img src="photo_5465320436935026811_c.jpg" alt="Мое фото" />
+    <div>
+        <h2>Гомасков Александр Викторович</h2>
+        <p>Я владею HTML и Python. Готов дополнить и усовершенствовать код по необходимости.</p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Мои навыки</h2>
+    <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Общительный, математические расчеты</li>
+        <li>Git, GitHub</li>
+        <li>Адаптивная верстка</li>
+        <li>И т.д.</li>
+    </ul>
+</section>
+
+<section id="portfolio">
+    <h2>Мои работы</h2>
+    <div class="project">
+        <h3>Проект 1</h3>
+        <p>Создание сайта на HTML с дизайном и анимациями, например, квадратиком. Меня похвалили за работу, что было очень приятно.</p>
+    </div>
+    <div class="project">
+        <h3>Проект 2</h3>
+        <p>Расчеты по теории вероятностей — я делал их в Excel и показывал результаты.</p>
+    </div>
+</section>
+
+<section id="contacts">
+    <h2>Свяжитесь со мной</h2>
+    <form>
+        <input type="text" placeholder="Ваше имя" required />
+        <input type="email" placeholder="Ваш email" required />
+        <textarea rows="4" placeholder="Ваше сообщение" required></textarea>
+        <button type="submit">Отправить</button>
+    </form>
+</section>
+
+<footer>
+    <div class="social-icons">
+        <a href="https://github.com/gigigi435-giD" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://web.telegram.org/k/#-5039448395" target="_blank" rel="noopener noreferrer">Telegram</a>
+    </div>
+    <div>
+        Телефон: +7 (928) 900-55-56 <br/>
+        Почта: good.bad.0500@mail.ru
+    </div>
+</footer>
+
+</body>
+</html>
